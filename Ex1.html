@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Rusnak, Lab 2, Exercise 1</title>
+    
+    <style>
+        body {
+            background-color: #DDDDDD;
+        }
+
+        canvas {
+            background-color: white;
+            display: block;
+        }
+
+        #canvas-container-id {
+            border: 1px solid black;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Anna Rusnak, Lab 2, Exercise 1, example 4</h2>
+
+    <div id="canvas-container-id">
+        <canvas id="canvas" width="300" height="300">    
+        </canvas>
+    </div>
+    
+    <script>
+        "use strict";
+        
+        var object = document.getElementById("canvas");
+        var ctx = object.getContext("2d");
+
+        //body
+        ctx.moveTo(80, 120);
+        ctx.lineTo(120, 120);
+        ctx.lineTo(120, 80);
+        ctx.lineTo(170, 80);
+        ctx.lineTo(170, 120);
+        ctx.lineTo(210, 120);
+        ctx.lineTo(210, 170);
+        ctx.lineTo(170, 170);
+        ctx.lineTo(170, 210);
+        ctx.lineTo(120, 210);
+        ctx.lineTo(120, 170);
+        ctx.lineTo(80, 170);
+        ctx.lineTo(80, 120);
+
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        //left eye
+        ctx.lineWidth = 1;
+        ctx.beginPath(130, 130);
+        ctx.arc(130, 130, 8, 0, 2 * Math.PI);
+
+        ctx.fillStyle = "white";
+        ctx.fill();
+        ctx.strokeStyle = "white";
+        ctx.stroke();
+
+        //black element of left eye
+        ctx.beginPath(130, 130);
+        ctx.arc(130, 130, 4, 0, 2 * Math.PI);
+
+        ctx.fillStyle = "black";
+        ctx.fill();
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+
+        ctx.beginPath(128, 129);
+        ctx.arc(128, 129, 1, 0, 2 * Math.PI);
+
+        ctx.fillStyle = "white";
+        ctx.fill();
+        ctx.strokeStyle = "white";
+        ctx.stroke();
+
+        //right eye
+        ctx.moveTo(160, 130);
+        ctx.beginPath(130, 130);
+        ctx.arc(160, 130, 8, 0, 2 * Math.PI);
+
+        ctx.fillStyle = "white";
+        ctx.fill();
+        ctx.strokeStyle = "white";
+        ctx.stroke();
+
+        //black element of right eye
+        ctx.beginPath(160, 130);
+        ctx.arc(160, 130, 4, 0, 2 * Math.PI);
+
+        ctx.fillStyle = "black";
+        ctx.fill();
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+
+        ctx.beginPath(158, 129);
+        ctx.arc(158, 129, 1, 0, 2 * Math.PI);
+
+        ctx.fillStyle = "white";
+        ctx.fill();
+        ctx.strokeStyle = "white";
+        ctx.stroke();
+
+        //smile
+        ctx.beginPath(127, 155);
+        ctx.moveTo(127, 155);
+        ctx.quadraticCurveTo(145, 185, 163, 155);
+        ctx.moveTo(163, 155);
+        ctx.quadraticCurveTo(145, 165, 127, 155);
+        ctx.fillStyle = "black";
+        ctx.fill();
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+
+        //left smile corner
+        ctx.beginPath(124, 156);
+        ctx.moveTo(124, 156);
+        ctx.quadraticCurveTo(128, 155, 127, 152);
+        ctx.stroke();
+
+        //right smile corner
+        ctx.beginPath(166, 156);
+        ctx.moveTo(166, 156);
+        ctx.quadraticCurveTo(162, 155, 163, 152);
+        ctx.stroke();
+
+
+        //teeth
+        ctx.beginPath(140, 160);
+        ctx.lineTo(140, 160);
+        ctx.lineTo(140, 164);
+        ctx.lineTo(150, 164);
+        ctx.lineTo(150, 160)
+        ctx.fillStyle = "white";
+        ctx.fill();
+        ctx.strokeStyle = "white";
+        ctx.stroke();
+
+        ctx.beginPath(145, 160);
+        ctx.lineTo(145, 160);
+        ctx.lineTo(145, 164);
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+    </script>
+</body>
+
+</html>
